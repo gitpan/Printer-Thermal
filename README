@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC/POS specification.
 
 VERSION
-    version v0.3
+    version v0.4
 
 SYNOPSIS
        use Printer::Thermal;
@@ -51,7 +51,7 @@ DESCRIPTION
     http://support.epson.ru/upload/library_file/14/esc-p.pdf
 
 ATTRIBUTES
-  $printer->usb_device_path
+  usb_device_path
     This variable contains the path for the printer device file when
     connected as a usb device on UNIX-like systems. I haven't added support
     for Windows and it probably wont work in doz as a local printer without
@@ -108,6 +108,7 @@ ATTRIBUTES
 
     my $print_string = $printer->print_string
 
+METHODS
   $printer->print();
     Sends the accumulated commands to the printer. All commands below need
     to be followed by a print() to send the data from buffer to the printer.

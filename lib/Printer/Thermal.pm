@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = 'v0.3'; # VERSION
+our $VERSION = 'v0.4'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -771,7 +771,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version v0.3
+version v0.4
 
 =head1 SYNOPSIS
 
@@ -812,7 +812,7 @@ For ESCE<sol>P codes refer the guide from Epson http:E<sol>E<sol>support.epson.r
 
 =head1 ATTRIBUTES
 
-=head2 $printer->usb_device_path
+=head2 usb_device_path
 
 This variable contains the path for the printer device file when connected as a usb device on UNIX-like systems. I haven't added support for Windows and it probably wont work in doz as a local printer without some modifications. Feel free to try it out and let me know what happens. This must be passed in the constructor
 
@@ -867,6 +867,8 @@ a bug report on why you need to use this.
 This contains the string in the module buffer
 
 my $print_string = $printer->print_string
+
+=head1 METHODS
 
 =head2 $printer->print();
 
