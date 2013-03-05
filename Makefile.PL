@@ -1,19 +1,64 @@
 
+use strict;
+use warnings;
 
-use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
-WriteMakefile(
-    NAME         => 'Printer::Thermal',
-    VERSION_FROM => 'lib/Printer/Thermal.pm', # finds \$VERSION
-    AUTHOR       => 'Shantanu Bhadoria (shantanu att cpan dottt org)',
-    ABSTRACT     => 'A High Level Interface to Thermal (and some dot-matrix) receipt/kitchen printers supporting Epson\'s ESC/POS specification',
-    PREREQ_PM    => {
-                     'Test::Simple' => 0.44,
-                     'Moose'        => 2.00,
-                     'Device::SerialPort' => 1.00,
-                     'IO::Socket'         => 1.25,
-                     'IO::File'           => 0,
-                     'Parse::BBCode'      => 0,
-                    },
+use 5.010;
+
+use ExtUtils::MakeMaker 6.30;
+
+
+
+my %WriteMakefileArgs = (
+  "ABSTRACT" => "Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC/POS specification.",
+  "AUTHOR" => "Shantanu Bhadoria <shantanu\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "ExtUtils::MakeMaker" => 0,
+    "File::Find" => 0,
+    "File::Spec::Functions" => 0,
+    "File::Temp" => 0,
+    "List::Util" => 0,
+    "Test::More" => 0
+  },
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "Printer-Thermal",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Printer::Thermal",
+  "PREREQ_PM" => {
+    "Device::SerialPort" => 0,
+    "IO::File" => 0,
+    "IO::Socket" => 0,
+    "Moose" => 0,
+    "POSIX" => 0,
+    "strict" => 0,
+    "warnings" => 0
+  },
+  "VERSION" => "0.001",
+  "test" => {
+    "TESTS" => "t/*.t"
+  }
 );
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
