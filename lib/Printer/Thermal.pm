@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.001'; # VERSION
+our $VERSION = 'v0.3'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -771,7 +771,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.001
+version v0.3
 
 =head1 SYNOPSIS
 
@@ -1034,7 +1034,7 @@ L<https://github.com/shantanubhadoria/printer-thermal>
 
 =head1 AUTHOR
 
-Shantanu Bhadoria <shantanu@cpan.org>
+Shantanu Bhadoria <shantanu at cpan dott org>
 
 =head1 CONTRIBUTORS
 
@@ -1047,6 +1047,10 @@ Shantanu Bhadoria <shantanu dott bhadoria atttt cpan dott org>
 =item *
 
 Shantanu Bhadoria <shantanu.bhadoria@gmail.com>
+
+=item *
+
+Shantanu Bhadoria <shantanu@cpan.org>
 
 =item *
 
