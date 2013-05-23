@@ -64,7 +64,7 @@
    "provides" : {
       "Printer::Thermal" : {
          "file" : "lib/Printer/Thermal.pm",
-         "version" : "v0.5.0"
+         "version" : "0.07"
       }
    },
    "release_status" : "stable",
@@ -79,7 +79,7 @@
          "web" : "https://github.com/shantanubhadoria/printer-thermal"
       }
    },
-   "version" : "v0.5",
+   "version" : "0.07",
    "x_contributors" : [
       "Shantanu Bhadoria <shantanu dott bhadoria atttt cpan dott org>",
       "Shantanu Bhadoria <shantanu.bhadoria@gmail.com>",
