@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.07'; # VERSION
+our $VERSION = '0.08'; # VERSION
 
 use 5.010;
 use Moose;
@@ -511,6 +511,16 @@ sub cutpaper {
 }
 
 
+sub open_cash_drawer {
+    my ($self) = @_;
+    $self->write($_ESC);
+    $self->write( chr(112) );
+    $self->write( chr(0) );
+    $self->write( chr(50) );
+    $self->write( chr(250) );
+}
+
+
 sub test {
     my ($self) = @_;
     $self->write("Write Stuff before linefeed");
@@ -658,20 +668,9 @@ sub test {
     $self->cutpaper();
 
     $self->print();
-    return;
     $self->bold_on();
     $self->print_text("line is bold\n");
     $self->bold_off();
-    $self->printmode( 0, 0, 1 );
-    $self->print_text("Part of this ");
-    $self->printmode( 0, 1, 0 );
-    $self->print_text("Part of this \n");
-    $self->printmode( 0, 0, 0 );
-    $self->print_text("Part of this ");
-    $self->printmode( 1, 0, 0 );
-    $self->print_text("line is fontB\n");
-    $self->printmode( 0, 0, 0 );
-    $self->print_text("Part of this ");
     $self->font_b( 1, 0, 0 );
     $self->print_text("line is fontB\n");
     $self->print_text("Part of this is different font\n");
@@ -706,11 +705,11 @@ sub test {
     $self->print_text("line is Inverted\n");
     $self->inverse_off();
     $self->justify("R");
-    $self->print_text("right justified\n");
+    $self->print_text("right justified\r");
     $self->justify("C");
-    $self->print_text("centered\n");
+    $self->print_text("centered\r");
     $self->justify("L");    # justify("L") works too
-    $self->print_text("left justified\n");
+    $self->print_text("left justified\r");
     $self->linefeed();
     $self->linefeed();
     $self->linefeed();
@@ -771,7 +770,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -966,6 +965,10 @@ Prints in second color for dual color printers
 =head2 $printer->cutpaper()
 
 Cuts the paper. Most Thermal receipt printers support the facility to cut the receipt using this command once printing is done.
+
+=head2 $printer->open_cash_drawer()
+
+Opens the Cash Drawer connected to the thermal printer.
 
 =head2 $printer->test()
 

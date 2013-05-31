@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC/POS specification.  ",
+  "ABSTRACT" => "Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC/POS specification.",
   "AUTHOR" => "Shantanu Bhadoria <shantanu at cpan dott org>",
   "BUILD_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.07",
+  "VERSION" => "0.08",
   "test" => {
     "TESTS" => "t/*.t"
   }
