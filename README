@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC/POS specification.
 
 VERSION
-    version 0.08
+    version 0.09
 
 SYNOPSIS
        use Printer::Thermal;
@@ -20,7 +20,7 @@ SYNOPSIS
  
        #For local printer connected on serial port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
        my $path = '/dev/ttyACM0';
-       $printer2 = Printer::Thermal->new(serial_device_path=$path);
+       $printer = Printer::Thermal->new(serial_device_path=$path);
        $printer->write("Blah Blah \nReceipt Details\nFooter");
        $printer->bold_on();
        $printer->write("Bold Text");
@@ -29,7 +29,7 @@ SYNOPSIS
  
        #For local printer connected on usb port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
        my $path = '/dev/usb/lp0';
-       $printer2 = Printer::Thermal->new(usb_device_path=$path);
+       $printer = Printer::Thermal->new(usb_device_path=$path);
        $printer->write("Blah Blah \nReceipt Details\nFooter");
        $printer->bold_on();
        $printer->write("Bold Text");
@@ -159,9 +159,6 @@ METHODS
 
   $printer->font_b();
   $printer->font_a();
-  $printer->printmode($font_number, $double_height_mode, $double_width_mode);
-    0 or 1,
-
   $printer->underline_off();
   $printer->underline_on();
   $printer->inverse_off();
@@ -190,6 +187,13 @@ METHODS
     Prints a bunch of test strings to see if your printer is working
     fine/connected properly. Don't worry if some things like emphasized and
     double strike looks the same, it happened with my printer too.
+
+NOTES
+    *   If the printer prints out garbled characters instead of proper text,
+        try specifying the baudrate parameter when creating printer object
+        when you create the printer object(not for network or USB printers)
+
+         $printer = Printer::Thermal->new(serial_device_path => '/dev/ttyACM0', baudrate => 9600);
 
 USAGE
     *   This Module offers a object oriented interface to ESC/POS Printers.

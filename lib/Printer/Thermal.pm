@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 use 5.010;
 use Moose;
@@ -361,23 +361,6 @@ sub font_a {
     #$self->write(chr(0));
     $self->font(0);
     $self->apply_printmode();
-}
-
-
-sub _printmode {
-    my ( $self, $font_number, $double_height_mode, $double_width_mode ) = @_;
-    if (   ( $font_number eq 1 || $font_number eq 0 )
-        && ( $double_height_mode eq 1 || $double_height_mode eq 0 )
-        && ( $double_width_mode eq 1  || $double_width_mode eq 0 ) )
-    {
-        my $value =
-          $font_number +
-          ( $double_height_mode * 16 ) +
-          ( $double_height_mode * 32 );
-        $self->write($_ESC);
-        $self->write( chr(33) );
-        $self->write( chr($value) );
-    }
 }
 
 sub apply_printmode {
@@ -770,7 +753,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -788,7 +771,7 @@ version 0.08
  
    #For local printer connected on serial port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
    my $path = '/dev/ttyACM0';
-   $printer2 = Printer::Thermal->new(serial_device_path=$path);
+   $printer = Printer::Thermal->new(serial_device_path=$path);
    $printer->write("Blah Blah \nReceipt Details\nFooter");
    $printer->bold_on();
    $printer->write("Bold Text");
@@ -797,7 +780,7 @@ version 0.08
  
    #For local printer connected on usb port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
    my $path = '/dev/usb/lp0';
-   $printer2 = Printer::Thermal->new(usb_device_path=$path);
+   $printer = Printer::Thermal->new(usb_device_path=$path);
    $printer->write("Blah Blah \nReceipt Details\nFooter");
    $printer->bold_on();
    $printer->write("Bold Text");
@@ -934,10 +917,6 @@ Function Specifies the character size (magnification ratio in the vertical and h
 
 =head2 $printer->font_a();
 
-=head2 $printer->printmode($font_number, $double_height_mode, $double_width_mode);
-
-0 or 1,
-
 =head2 $printer->underline_off();
 
 =head2 $printer->underline_on();
@@ -973,6 +952,18 @@ Opens the Cash Drawer connected to the thermal printer.
 =head2 $printer->test()
 
 Prints a bunch of test strings to see if your printer is working fine/connected properly. Don't worry if some things like emphasized and double strike looks the same, it happened with my printer too.
+
+=head1 NOTES
+
+=over
+
+=item *
+
+If the printer prints out garbled characters instead of proper text, try specifying the baudrate parameter when creating printer object when you create the printer object(not for network or USB printers)
+
+=back
+
+     $printer = Printer::Thermal->new(serial_device_path => '/dev/ttyACM0', baudrate => 9600);
 
 =head1 USAGE
 
