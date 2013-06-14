@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.10'; # VERSION
+our $VERSION = '0.11'; # VERSION
 
 use 5.010;
 use Moose;
@@ -281,17 +281,15 @@ sub justify {
 
 sub bold_off {
     my ($self) = @_;
-    $self->write($_ESC);
-    $self->write( chr(69) );
-    $self->write( chr(0) );
+    $self->emphasized(0);
+    $self->apply_printmode();
 }
 
 
 sub bold_on {
     my ($self) = @_;
-    $self->write($_ESC);
-    $self->write( chr(69) );
-    $self->write( chr(1) );
+    $self->emphasized(1);
+    $self->apply_printmode();
 }
 
 
@@ -753,7 +751,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
