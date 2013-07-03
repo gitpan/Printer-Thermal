@@ -37,6 +37,7 @@
             "IO::Socket" : 0,
             "Moose" : 0,
             "POSIX" : 0,
+            "Time::HiRes" : 0,
             "perl" : "5.010",
             "strict" : 0,
             "warnings" : 0
@@ -56,7 +57,7 @@
    "provides" : {
       "Printer::Thermal" : {
          "file" : "lib/Printer/Thermal.pm",
-         "version" : "0.12"
+         "version" : "0.13"
       }
    },
    "release_status" : "stable",
@@ -71,7 +72,7 @@
          "web" : "https://github.com/shantanubhadoria/printer-thermal"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_contributors" : [
       "Shantanu Bhadoria <shantanu dott bhadoria atttt cpan dott org>",
       "Shantanu Bhadoria <shantanu.bhadoria@gmail.com>",

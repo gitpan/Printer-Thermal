@@ -21,6 +21,7 @@ my @modules = qw(
   Moose
   POSIX
   Test::More
+  Time::HiRes
   perl
   strict
   warnings

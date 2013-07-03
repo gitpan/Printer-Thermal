@@ -32,10 +32,11 @@ my %WriteMakefileArgs = (
     "IO::Socket" => 0,
     "Moose" => 0,
     "POSIX" => 0,
+    "Time::HiRes" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.12",
+  "VERSION" => "0.13",
   "test" => {
     "TESTS" => "t/*.t"
   }
