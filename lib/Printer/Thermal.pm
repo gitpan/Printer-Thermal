@@ -13,13 +13,13 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.13'; # VERSION
+our $VERSION = '0.14'; # VERSION
 
+# Dependencies
 use 5.010;
 use Moose;
 use POSIX;
 
-# Dependencies
 use Device::SerialPort;
 use IO::File;
 use IO::Socket;
@@ -758,7 +758,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 

@@ -2,9 +2,9 @@ Changes
 LICENSE
 MANIFEST
 META.json
+META.yml
 Makefile.PL
 README
-dist.ini
 example/Test.pl
 lib/Printer/Thermal.pm
 t/00-compile.t
