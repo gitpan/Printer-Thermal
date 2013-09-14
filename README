@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC/POS specification.
 
 VERSION
-    version 0.15
+    version 0.16
 
 SYNOPSIS
        use Printer::Thermal;
@@ -185,6 +185,11 @@ adds a horizontal tab character like a \t to the print string.
     ratio â¤ 8 Initial Value n=0 Function Specifies the character size
     (magnification ratio in the vertical and horizontal directions).
 
+  font_size_esc
+    Set ESC specified font size
+
+        $printer->font_size_esc($size);
+
   $printer->font_b();
   $printer->font_a();
   $printer->underline_off();
@@ -197,6 +202,9 @@ adds a horizontal tab character like a \t to the print string.
     Print some text defined by msg. If chars_per_line is defined, inserts
     newlines after the given amount. Use normal '\n' line breaks for empty
     lines.
+
+  print_bitmap
+    To be done: This function is not implemented yet.
 
   $printer->color_1()
     Prints in first color for dual color printers
@@ -264,6 +272,8 @@ AUTHOR
     Shantanu Bhadoria <shantanu at cpan dott org>
 
 CONTRIBUTORS
+    *   Shantanu <shantanu@cpan.org>
+
     *   Shantanu Bhadoria <shantanu dott bhadoria atttt cpan dott org>
 
     *   Shantanu Bhadoria <shantanu.bhadoria@gmail.com>

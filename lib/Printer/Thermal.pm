@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.15'; # VERSION
+our $VERSION = '0.16'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -191,7 +191,7 @@ sub _build_printer {
 
 
 sub print {
-    my ( $self, $string ) = @_;
+    my ($self) = @_;
     my $printer = $self->printer;
     my @chunks;
     my $string = $self->print_string;
@@ -289,14 +289,14 @@ sub justify {
 sub bold_off {
     my ($self) = @_;
     $self->emphasized(0);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
 
 sub bold_on {
     my ($self) = @_;
     $self->emphasized(1);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
 
@@ -339,6 +339,7 @@ sub font_size {
     $self->write( chr($size) );
 }
 
+
 sub font_size_esc {
     my ( $self, $size ) = @_;
     $self->write($_ESC);
@@ -354,7 +355,7 @@ sub font_b {
     #$self->write(chr(77));
     #$self->write(chr(1));
     $self->font(1);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
 
@@ -365,10 +366,10 @@ sub font_a {
     #$self->write(chr(77));
     #$self->write(chr(0));
     $self->font(0);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
-sub apply_printmode {
+sub _apply_printmode {
     my ($self)        = @_;
     my $font          = $self->font;
     my $underline     = $self->underline;
@@ -394,7 +395,7 @@ sub underline_off {
     #$self->write(chr(45));
     #$self->write(chr(0));
     $self->underline(0);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
 
@@ -405,7 +406,7 @@ sub underline_on {
     #$self->write(chr(45));
     #$self->write(chr(1));
     $self->underline(1);
-    $self->apply_printmode();
+    $self->_apply_printmode();
 }
 
 
@@ -455,6 +456,7 @@ sub print_text {
         $self->write($msg);
     }
 }
+
 
 sub print_bitmap {
     my ( $self, $pixels, $w, $h, $output_png ) = @_;
@@ -758,7 +760,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 
@@ -937,6 +939,12 @@ However, 1 ≤ vertical direction magnification ratio ≤ 8, 1 ≤ horizontal di
 Initial Value n=0
 Function Specifies the character size (magnification ratio in the vertical and horizontal directions).
 
+=head2 font_size_esc
+
+Set ESC specified font size
+
+    $printer->font_size_esc($size);
+
 =head2 $printer->font_b();
 
 =head2 $printer->font_a();
@@ -956,6 +964,10 @@ Function Specifies the character size (magnification ratio in the vertical and h
 =head2 $printer->print_text($msg,$chars_per_line);
 
 Print some text defined by msg. If chars_per_line is defined, inserts newlines after the given amount. Use normal '\n' line breaks for empty lines.
+
+=head2 print_bitmap
+
+To be done: This function is not implemented yet.
 
 =head2 $printer->color_1()
 
@@ -1061,6 +1073,10 @@ Shantanu Bhadoria <shantanu at cpan dott org>
 =head1 CONTRIBUTORS
 
 =over 4
+
+=item *
+
+Shantanu <shantanu@cpan.org>
 
 =item *
 
