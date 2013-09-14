@@ -29,7 +29,7 @@ no_index:
 provides:
   Printer::Thermal:
     file: lib/Printer/Thermal.pm
-    version: 0.16
+    version: 0.17
 requires:
   Device::SerialPort: 0
   IO::File: 0
@@ -44,7 +44,7 @@ resources:
   bugtracker: https://github.com/shantanubhadoria/printer-thermal/issues
   homepage: https://metacpan.org/release/Printer-Thermal
   repository: git://github.com/shantanubhadoria/printer-thermal.git
-version: 0.16
+version: 0.17
 x_contributors:
   - 'Shantanu <shantanu@cpan.org>'
   - 'Shantanu Bhadoria <shantanu dott bhadoria atttt cpan dott org>'
