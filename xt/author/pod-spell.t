@@ -24,6 +24,8 @@ refactor
 usb
 atttt
 bhadoria
+barcode
+doublestrike
 Shantanu
 Bhadoria
 shantanu

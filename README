@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC/POS specification.
 
 VERSION
-    version 0.18
+    version 0.19
 
 SYNOPSIS
        use Printer::Thermal;
@@ -130,7 +130,7 @@ ATTRIBUTES
     my $print_string = $printer->print_string
 
 METHODS
-  $printer->print();
+  $printer->print()
     Sends the accumulated commands to the printer. All commands below need
     to be followed by a print() to send the data from buffer to the printer.
     You may call more than one printer command and then call print to send
@@ -142,12 +142,12 @@ METHODS
         $printer->cutpaper();
         $pritner->print(); # Sends the all the commands before this to the printer in one go.
 
-  $printer->write("some text\n");
+  $printer->write("some text\n")
     Writes a bunch of text that you pass here to the module buffer. Note
     that this will not be passed to the printer till you call
     $printer->print()
 
-  $printer->left_margin($nl,$nh);
+  $printer->left_margin($nl,$nh)
     Sets the left margin code to the printer. takes two single byte
     parameters, $nl and $nh. To determine the value of these two bytes, use
     the INT and MOD conventions. INT indicates the integer (or whole number)
@@ -162,44 +162,73 @@ METHODS
     Takes a one byte number, spacing as a parameter
 
   $printer->horiz_tab()
-adds a horizontal tab character like a \t to the print string.
+    Adds a horizontal tab character like a \t to the print string.
+
   $printer->line_spacing($value)
     Allows you to set the line spacing for the printer.
 
   $printer->linefeed()
-    sends a new line character, i.e carriage return and line feed
+    Sends a new line character, i.e carriage return and line feed
 
   $printer->justify($alignment)
     $alignment can be either 'L','C' or 'R' for left center and right
     justified printing
 
-  $printer->bold_off();
-  $printer->bold_on();
-  $printer->doublestrike_off();
-  $printer->doublestrike_on();
-  $printer->emphasize_off();
-  $printer->emphasize_on();
-  $printer->font_size($n);
+  $printer->bold_off()
+    Turns bold printing off
+
+  $printer->bold_on()
+    Turns bold printing on
+
+  $printer->doublestrike_off()
+    Turns doublestrike on characters off
+
+  $printer->doublestrike_on()
+    Turns doublestrike on characters on
+
+  $printer->emphasize_off()
+    Turns off emphasize(read ESC/POS documentation)
+
+  $printer->emphasize_on()
+    Turns on emphasize(read ESC/POS documentation)
+
+  $printer->font_size($n)
     Defined Region 0 â¤ n â¤ 255 However, 1 â¤ vertical direction
     magnification ratio â¤ 8, 1 â¤ horizontal direction magnification
     ratio â¤ 8 Initial Value n=0 Function Specifies the character size
     (magnification ratio in the vertical and horizontal directions).
 
-  font_size_esc
+  $printer->font_size_esc($size)
     Set ESC specified font size
 
         $printer->font_size_esc($size);
 
-  $printer->font_b();
-  $printer->font_a();
-  $printer->underline_off();
+  $printer->font_b()
+    Switches printing to font b
+
+  $printer->font_a()
+    Switches printing to font a
+
+  $printer->underline_off()
+    Switches off underline
+
   $printer->underline_on();
+    Switches on underline
+
   $printer->inverse_off();
+    Switches off inverse text
+
   $printer->inverse_on();
+    Switches on inverse text
+
   $printer->barcode_height($height);
+    Sets barcode height
+
   $printer->print_barcode($type,$string)
+    Prints barcode
+
   $printer->print_text($msg,$chars_per_line);
-    Print some text defined by msg. If chars_per_line is defined, inserts
+    Prints some text defined by msg. If chars_per_line is defined, inserts
     newlines after the given amount. Use normal '\n' line breaks for empty
     lines.
 
