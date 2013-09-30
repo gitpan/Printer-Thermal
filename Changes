@@ -1,30 +1,37 @@
 Changelog for Printer-Thermal
 
-0.19 2013-09-15T05:34:04
+release-0.20 2013-09-30T07:57:42
+ - Attempting to fix Pod [Shantanu Bhadoria]
+ - Adding mailmap to avoid explosions in contributors [Shantanu Bhadoria]
+
+release-0.19 2013-09-15T05:34:37
+ - v0.19
+   
+    - Fixed POD Errors [Shantanu] [Shantanu]
  - Fixed POD Errors [Shantanu]
 
-0.18 2013-09-14T04:29:29
+release-0.18 2013-09-14T04:29:29
  - v0.18 [Shantanu]
 
-0.17 2013-09-14T03:44:55
+release-0.17 2013-09-14T03:44:55
  - v0.17
    
     - Renamed example to examples to match spec [Shantanu] [Shantanu]
  - Renamed example to examples to match spec [Shantanu]
 
-0.16 2013-09-14T01:50:04
+release-0.16 2013-09-14T01:50:04
  - v0.16
    
     - Fixed Pos Errors [Shantanu] [Shantanu]
  - Fixed Pos Errors [Shantanu]
 
-0.15 2013-09-12T06:52:21
+release-0.15 2013-09-12T06:52:21
  - v0.15
    
     - Bump Changes [Shantanu Bhadoria] [Shantanu]
  - Bump Changes [Shantanu Bhadoria]
 
-0.14 2013-07-11T03:40:42
+release-0.14 2013-07-11T03:40:42
  - v0.14
    
 	   - 2013-07-11 11:40:17 Asia/Singapore
@@ -33,14 +40,14 @@ Changelog for Printer-Thermal
  - Code Cleanup added YML to ignore list [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.13 2013-07-03T08:35:18
+release-0.13 2013-07-03T08:35:18
  - v0.13
    
 	   - 2013-07-03 16:34:47 Asia/Singapore [Shantanu Bhadoria]
  - Fixed Time Hires include bug [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.12 2013-07-03T06:00:25
+release-0.12 2013-07-03T06:00:25
  - v0.12
    
 	   - 2013-07-03 14:00:00 Asia/Singapore [Shantanu Bhadoria]
@@ -52,7 +59,7 @@ Changelog for Printer-Thermal
    stupid grammer [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.11 2013-06-14T05:08:10
+release-0.11 2013-06-14T05:08:10
  - v0.11
    
 	   - 2013-06-14 13:07:46 Asia/Singapore [Shantanu Bhadoria]
@@ -60,14 +67,14 @@ Changelog for Printer-Thermal
    Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.10 2013-06-11T02:02:20
+release-0.10 2013-06-11T02:02:20
  - v0.10
    
 	   - 2013-06-11 09:34:09 Asia/Singapore [Shantanu Bhadoria]
  - Fixed POD Error encoding utf-8 [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.09 2013-06-11T01:28:12
+release-0.09 2013-06-11T01:28:12
  - v0.09
    
 	   - 2013-06-11 09:27:41 Asia/Singapore [Shantanu Bhadoria]
@@ -75,19 +82,19 @@ Changelog for Printer-Thermal
    [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.08 2013-05-31T04:42:48
+release-0.08 2013-05-31T04:42:48
  - v0.08
    
 	   - 2013-05-31 12:42:18 Asia/Singapore [Shantanu Bhadoria]
  - Added Drawer kick function [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-0.07 2013-05-23T06:25:11
+release-0.07 2013-05-23T06:25:11
  - v0.07
    
 	   - 2013-05-23 14:24:25 Asia/Singapore [Shantanu Bhadoria]
 
-0.06 2013-05-23T05:08:22
+release-0.06 2013-05-23T05:08:22
  - Bump Changes [Shantanu Bhadoria]
  - vv0.5
    
