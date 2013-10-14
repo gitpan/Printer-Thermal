@@ -1,6 +1,12 @@
 Changelog for Printer-Thermal
 
-release-0.21 2013-10-14T06:15:55
+release-0.22 2013-10-14T06:58:37
+ - Testing wierdness in POD checker behaviour wrt podlint when testing >
+   and < signs podlint expects them to be escaped but perldoc doesnt like
+   it [Shantanu Bhadoria]
+
+release-0.21 2013-10-14T06:16:42
+ - v0.21 [Shantanu Bhadoria]
  - Fixed More POD Errors [Shantanu Bhadoria]
 
 release-0.20 2013-09-30T07:58:17

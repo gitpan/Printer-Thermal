@@ -3,38 +3,38 @@ NAME
     inkjet) Printers that support ESC-POS specification.
 
 VERSION
-    version 0.21
+    version 0.22
 
 SYNOPSIS
        use Printer::Thermal;
  
        #For Network Printers $port is 9100 in most cases but might differ depending on how you have configured your printer
-       $printer = Printer::Thermal-E<gt>new(device_ip=E<gt>$printer_ip,device_port=E<gt>$port);
+       $printer = Printer::Thermal->new(device_ip=>$printer_ip,device_port=>$port);
  
-       #These commands won't actually send anything to the printer but it will store all the merged data including control codes to send to printer in $printer-E<gt>print_string variable.
-       $printer-E<gt>write("Blah Blah \nReceipt Details\nFooter");
-       $printer-E<gt>bold_on();
-       $printer-E<gt>write("Bold Text");
-       $printer-E<gt>bold_off();
-       $printer-E<gt>print(); ##Sends the above set of code to the printer. Clears the buffer text in module.
+       #These commands won't actually send anything to the printer but it will store all the merged data including control codes to send to printer in $printer->print_string variable.
+       $printer->write("Blah Blah \nReceipt Details\nFooter");
+       $printer->bold_on();
+       $printer->write("Bold Text");
+       $printer->bold_off();
+       $printer->print(); ##Sends the above set of code to the printer. Clears the buffer text in module.
  
        #For local printer connected on serial port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
        my $path = '/dev/ttyACM0';
-       $printer = Printer::Thermal-E<gt>new(serial_device_path=$path);
-       $printer-E<gt>write("Blah Blah \nReceipt Details\nFooter");
-       $printer-E<gt>bold_on();
-       $printer-E<gt>write("Bold Text");
-       $printer-E<gt>bold_off();
-       $printer-E<gt>print();
+       $printer = Printer::Thermal->new(serial_device_path=$path);
+       $printer->write("Blah Blah \nReceipt Details\nFooter");
+       $printer->bold_on();
+       $printer->write("Bold Text");
+       $printer->bold_off();
+       $printer->print();
  
        #For local printer connected on usb port, check syslog(Usually under /var/log/syslog) for what device file was created for your printer when you connect it to your system(For plug and play printers).
        my $path = '/dev/usb/lp0';
-       $printer = Printer::Thermal-E<gt>new(usb_device_path=$path);
-       $printer-E<gt>write("Blah Blah \nReceipt Details\nFooter");
-       $printer-E<gt>bold_on();
-       $printer-E<gt>write("Bold Text");
-       $printer-E<gt>bold_off();
-       $printer-E<gt>print();
+       $printer = Printer::Thermal->new(usb_device_path=$path);
+       $printer->write("Blah Blah \nReceipt Details\nFooter");
+       $printer->bold_on();
+       $printer->write("Bold Text");
+       $printer->bold_off();
+       $printer->print();
 
 DESCRIPTION
     Some might not find the module name accurate since ESC-P was developed
@@ -153,10 +153,10 @@ METHODS
     bunch of commands print a text to a printer, move down one line, and cut
     the receipt paper.
 
-        $printer-E<gt>write("hello Printer\n");
-        $printer-E<gt>linefeed();
-        $printer-E<gt>cutpaper();
-        $printer-E<gt>print(); # Sends the all the commands before this to the printer in one go.
+        $printer->write("hello Printer\n");
+        $printer->linefeed();
+        $printer->cutpaper();
+        $printer->print(); # Sends the all the commands before this to the printer in one go.
 
   write
     $printer->write("some text\n") Writes a bunch of text that you pass here
@@ -218,7 +218,7 @@ METHODS
   font_size_esc
     Set ESC specified font size
 
-        $printer-E<gt>font_size_esc($size);
+        $printer->font_size_esc($size);
 
   font_b
     Switches printing to font b
@@ -275,7 +275,7 @@ NOTES
         try specifying the baudrate parameter when creating printer object
         when you create the printer object(not for network or USB printers)
 
-         $printer = Printer::Thermal-E<gt>new(serial_device_path => '/dev/ttyACM0', baudrate => 9600);
+         $printer = Printer::Thermal->new(serial_device_path => '/dev/ttyACM0', baudrate => 9600);
 
 USAGE
     *   This Module offers a object oriented interface to ESC-POS Printers.
