@@ -1,6 +1,10 @@
 Changelog for Printer-Thermal
 
-release-0.20 2013-09-30T07:57:42
+release-0.21 2013-10-14T06:15:55
+ - Fixed More POD Errors [Shantanu Bhadoria]
+
+release-0.20 2013-09-30T07:58:17
+ - v0.20 [Shantanu Bhadoria]
  - Attempting to fix Pod [Shantanu Bhadoria]
  - Adding mailmap to avoid explosions in contributors [Shantanu Bhadoria]
 

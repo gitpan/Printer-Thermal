@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.20'; # VERSION
+our $VERSION = '0.21'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -765,7 +765,7 @@ Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printe
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
@@ -881,9 +881,19 @@ Set ESC-POS Font
 
 =head2 underline
 
+Set/unset underline property
+
 =head2 emphasized
 
+Set/unset emphasized property
+
 =head2 double_height
+
+set unset double height property
+
+=head2 double_width
+
+set unset double width property
 
 =head1 METHODS
 
@@ -1040,8 +1050,6 @@ Prints a bunch of test strings to see if your printer is working fine/connected 
 
 =encoding utf-8
 
-=double_width
-
 =head1 NOTES
 
 =over
@@ -1105,7 +1113,7 @@ Shantanu Bhadoria (shantanu@cpan.org)
 
 =head1 CONTRIBUTOR
 
-Shantanu Bhadoria E<lt>shantanu att cpan dott orgE<gt>
+Shantanu Bhadoria <shantanu att cpan dott org>
 
 =head1 COPYRIGHT AND LICENSE
 

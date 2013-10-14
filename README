@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC-POS specification.
 
 VERSION
-    version 0.20
+    version 0.21
 
 SYNOPSIS
        use Printer::Thermal;
@@ -133,8 +133,17 @@ ATTRIBUTES
     Set ESC-POS Font
 
   underline
+    Set/unset underline property
+
   emphasized
+    Set/unset emphasized property
+
   double_height
+    set unset double height property
+
+  double_width
+    set unset double width property
+
 METHODS
   print
     $printer->print() Sends the accumulated commands to the printer. All
@@ -260,8 +269,6 @@ METHODS
     Prints a bunch of test strings to see if your printer is working
     fine/connected properly. Don't worry if some things like emphasized and
     double strike looks the same, it happened with my printer too.
-
-    =double_width
 
 NOTES
     *   If the printer prints out garbled characters instead of proper text,
