@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC-POS specification.
 
 VERSION
-    version 0.24
+    version 0.25
 
 SYNOPSIS
        use Printer::Thermal;

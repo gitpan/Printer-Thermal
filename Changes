@@ -1,52 +1,55 @@
 Changelog for Printer-Thermal
 
-release-0.23 2013-10-16T04:23:10
+0.24 2013-10-16T04:27:09
+ - v0.24 [Shantanu Bhadoria]
+
+0.23 2013-10-16T04:23:10
  - v0.23 [Shantanu Bhadoria]
  - Fixed pod nested encoding error [Shantanu Bhadoria]
 
-release-0.22 2013-10-14T06:59:45
+0.22 2013-10-14T06:59:45
  - v0.22 [Shantanu Bhadoria]
  - Testing wierdness in POD checker behaviour wrt podlint when testing >
    and < signs podlint expects them to be escaped but perldoc doesnt like
    it [Shantanu Bhadoria]
 
-release-0.21 2013-10-14T06:16:42
+0.21 2013-10-14T06:16:42
  - v0.21 [Shantanu Bhadoria]
  - Fixed More POD Errors [Shantanu Bhadoria]
 
-release-0.20 2013-09-30T07:58:17
+0.20 2013-09-30T07:58:17
  - v0.20 [Shantanu Bhadoria]
  - Attempting to fix Pod [Shantanu Bhadoria]
  - Adding mailmap to avoid explosions in contributors [Shantanu Bhadoria]
 
-release-0.19 2013-09-15T05:34:37
+0.19 2013-09-15T05:34:37
  - v0.19
    
     - Fixed POD Errors [Shantanu] [Shantanu]
  - Fixed POD Errors [Shantanu]
 
-release-0.18 2013-09-14T04:29:29
+0.18 2013-09-14T04:29:29
  - v0.18 [Shantanu]
 
-release-0.17 2013-09-14T03:44:55
+0.17 2013-09-14T03:44:55
  - v0.17
    
     - Renamed example to examples to match spec [Shantanu] [Shantanu]
  - Renamed example to examples to match spec [Shantanu]
 
-release-0.16 2013-09-14T01:50:04
+0.16 2013-09-14T01:50:04
  - v0.16
    
     - Fixed Pos Errors [Shantanu] [Shantanu]
  - Fixed Pos Errors [Shantanu]
 
-release-0.15 2013-09-12T06:52:21
+0.15 2013-09-12T06:52:21
  - v0.15
    
     - Bump Changes [Shantanu Bhadoria] [Shantanu]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.14 2013-07-11T03:40:42
+0.14 2013-07-11T03:40:42
  - v0.14
    
 	   - 2013-07-11 11:40:17 Asia/Singapore
@@ -55,14 +58,14 @@ release-0.14 2013-07-11T03:40:42
  - Code Cleanup added YML to ignore list [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.13 2013-07-03T08:35:18
+0.13 2013-07-03T08:35:18
  - v0.13
    
 	   - 2013-07-03 16:34:47 Asia/Singapore [Shantanu Bhadoria]
  - Fixed Time Hires include bug [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.12 2013-07-03T06:00:25
+0.12 2013-07-03T06:00:25
  - v0.12
    
 	   - 2013-07-03 14:00:00 Asia/Singapore [Shantanu Bhadoria]
@@ -74,7 +77,7 @@ release-0.12 2013-07-03T06:00:25
    stupid grammer [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.11 2013-06-14T05:08:10
+0.11 2013-06-14T05:08:10
  - v0.11
    
 	   - 2013-06-14 13:07:46 Asia/Singapore [Shantanu Bhadoria]
@@ -82,14 +85,14 @@ release-0.11 2013-06-14T05:08:10
    Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.10 2013-06-11T02:02:20
+0.10 2013-06-11T02:02:20
  - v0.10
    
 	   - 2013-06-11 09:34:09 Asia/Singapore [Shantanu Bhadoria]
  - Fixed POD Error encoding utf-8 [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.09 2013-06-11T01:28:12
+0.09 2013-06-11T01:28:12
  - v0.09
    
 	   - 2013-06-11 09:27:41 Asia/Singapore [Shantanu Bhadoria]
@@ -97,19 +100,19 @@ release-0.09 2013-06-11T01:28:12
    [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.08 2013-05-31T04:42:48
+0.08 2013-05-31T04:42:48
  - v0.08
    
 	   - 2013-05-31 12:42:18 Asia/Singapore [Shantanu Bhadoria]
  - Added Drawer kick function [Shantanu Bhadoria]
  - Bump Changes [Shantanu Bhadoria]
 
-release-0.07 2013-05-23T06:25:11
+0.07 2013-05-23T06:25:11
  - v0.07
    
 	   - 2013-05-23 14:24:25 Asia/Singapore [Shantanu Bhadoria]
 
-release-0.06 2013-05-23T05:08:22
+0.06 2013-05-23T05:08:22
  - Bump Changes [Shantanu Bhadoria]
  - vv0.5
    

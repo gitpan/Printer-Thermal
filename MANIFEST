@@ -5,8 +5,6 @@ META.json
 META.yml
 Makefile.PL
 README
-debian/changelog
-debian/control
 examples/Test.pl
 lib/Printer/Thermal.pm
 t/00-compile.t
