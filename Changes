@@ -1,6 +1,10 @@
 Changelog for Printer-Thermal
 
-release-0.22 2013-10-14T06:58:37
+release-0.23 2013-10-16T04:22:32
+ - Fixed pod nested encoding error [Shantanu Bhadoria]
+
+release-0.22 2013-10-14T06:59:45
+ - v0.22 [Shantanu Bhadoria]
  - Testing wierdness in POD checker behaviour wrt podlint when testing >
    and < signs podlint expects them to be escaped but perldoc doesnt like
    it [Shantanu Bhadoria]

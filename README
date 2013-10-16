@@ -3,7 +3,7 @@ NAME
     inkjet) Printers that support ESC-POS specification.
 
 VERSION
-    version 0.22
+    version 0.23
 
 SYNOPSIS
        use Printer::Thermal;
@@ -210,9 +210,9 @@ METHODS
     Turns on emphasize(read ESC-POS documentation)
 
   font_size
-    Defined Region 0 â¤ n â¤ 255 However, 1 â¤ vertical direction
-    magnification ratio â¤ 8, 1 â¤ horizontal direction magnification
-    ratio â¤ 8 Initial Value n=0 Function Specifies the character size
+    Defined Region 0 <= n <= 255 However, 1 <= vertical direction
+    magnification ratio <= 8, 1 <= horizontal direction magnification ratio
+    <= 8 Initial Value n=0 Function Specifies the character size
     (magnification ratio in the vertical and horizontal directions).
 
   font_size_esc
