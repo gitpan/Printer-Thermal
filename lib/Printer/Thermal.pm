@@ -4,7 +4,7 @@ use warnings;
 package Printer::Thermal;
 
 # PODNAME: Printer::Thermal
-# ABSTRACT: Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC-POS specification.
+# ABSTRACT: Interface for Thermal and some dot-matrix and inkjet Printers that support ESC-POS specification.
 #
 # This file is part of Printer-Thermal
 #
@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.25'; # VERSION
+our $VERSION = '0.26'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -761,11 +761,11 @@ __END__
 
 =head1 NAME
 
-Printer::Thermal - Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC-POS specification.
+Printer::Thermal - Interface for Thermal and some dot-matrix and inkjet Printers that support ESC-POS specification.
 
 =head1 VERSION
 
-version 0.25
+version 0.26
 
 =head1 SYNOPSIS
 
