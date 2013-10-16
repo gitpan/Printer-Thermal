@@ -1,5 +1,5 @@
 {
-   "abstract" : "Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC-POS specification.",
+   "abstract" : "Interface for Thermal (and some dot-matrix and inkjet) Printers that support ESC-POS specification.  ",
    "author" : [
       "Shantanu Bhadoria (shantanu@cpan.org)"
    ],
@@ -66,7 +66,7 @@
    "provides" : {
       "Printer::Thermal" : {
          "file" : "lib/Printer/Thermal.pm",
-         "version" : "0.23"
+         "version" : "0.24"
       }
    },
    "release_status" : "stable",
@@ -81,7 +81,7 @@
          "web" : "https://github.com/shantanubhadoria/printer-thermal"
       }
    },
-   "version" : "0.23",
+   "version" : "0.24",
    "x_contributors" : [
       "Shantanu Bhadoria <shantanu att cpan dott org>"
    ]
