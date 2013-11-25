@@ -13,7 +13,7 @@ package Printer::Thermal;
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-our $VERSION = '0.26'; # VERSION
+our $VERSION = '0.27'; # VERSION
 
 # Dependencies
 use 5.010;
@@ -200,11 +200,11 @@ sub print {
     my $printer = $self->printer;
     my @chunks;
     my $string = $self->print_string;
-    my $n      = 300;                   # Size of each chunk in bytes
+    my $n      = 100;                   # Size of each chunk in bytes
     @chunks = unpack "a$n" x ( ( length($string) / $n ) - 1 ) . "a*", $string;
     for my $chunk (@chunks) {
         $printer->write($chunk);
-        usleep(1000);
+        usleep(2000);
     }
     $self->print_string("");
 }
@@ -765,7 +765,7 @@ Printer::Thermal - Interface for Thermal and some dot-matrix and inkjet Printers
 
 =head1 VERSION
 
-version 0.26
+version 0.27
 
 =head1 SYNOPSIS
 

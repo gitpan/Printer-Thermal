@@ -1,7 +1,15 @@
-printer-thermal (0.26) stable; urgency=low
+printer-thermal (0.27) stable; urgency=low
+  * Reduced Printer buffer size to accomadate printers with smaller
+    buffers. 
+
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Mon, 25 Nov 2013 11:10:11 -0000
+
+printer-thermal (release-0.26) stable; urgency=low
+  * v0.26
+  - minor edits [Shantanu] 
   * minor edits 
 
- -- Shantanu Bhadoria <shantanu@cpan.org>  Wed, 16 Oct 2013 13:41:25 -0000
+ -- Shantanu Bhadoria <shantanu@cpan.org>  Wed, 16 Oct 2013 13:43:30 -0000
 
 printer-thermal (release-0.25) stable; urgency=low
   * v0.25 

@@ -12,9 +12,7 @@ use List::Util qw/max/;
 my @modules = qw(
     Device::SerialPort
   ExtUtils::MakeMaker
-  File::Find
   File::Spec::Functions
-  File::Temp
   IO::File
   IO::Socket
   List::Util

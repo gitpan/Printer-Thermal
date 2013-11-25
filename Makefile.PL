@@ -33,13 +33,11 @@ my %WriteMakefileArgs = (
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
-    "File::Find" => 0,
     "File::Spec::Functions" => 0,
-    "File::Temp" => 0,
     "List::Util" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "0.26",
+  "VERSION" => "0.27",
   "test" => {
     "TESTS" => "t/*.t"
   }
